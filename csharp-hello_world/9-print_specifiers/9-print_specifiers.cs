@@ -7,6 +7,6 @@ class Program
         double percent = .7553;
         double currency = 98765.4321;
 		Console.WriteLine($"Percent: {percent:P2} tip");
-        Console.WriteLine($"Currency: {currency:C2}");  // Affiche la monnaie avec format
+        Console.WriteLine($"Currency: ${currency:C2}");  // Affiche la monnaie avec format
     }
 }
