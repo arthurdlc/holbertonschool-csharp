@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-dotnet new console -o 3-writeline
-dotnet build 3-writeline
-dotnet run --project 3-writeline
+dotnet new console -o 4-print_integer
+dotnet build 4-print_integer
+dotnet run --project -print_integer
