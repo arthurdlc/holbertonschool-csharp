@@ -5,5 +5,4 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>_5_print_float</RootNamespace>
   </PropertyGroup>
-
 </Project>
