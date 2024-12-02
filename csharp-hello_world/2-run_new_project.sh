@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-dotnet new console -o 4-print_integer
-dotnet build 4-print_integer
-dotnet run --project -print_integer
+dotnet new console -o 5-print_float
+dotnet build 5-print_float
+dotnet run --project 5-print_float
