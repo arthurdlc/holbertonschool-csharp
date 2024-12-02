@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Check if the folder 0-new_project already exists
 if [ -d "0-new_project" ]; then
