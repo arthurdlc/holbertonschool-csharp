@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-dotnet new console -o 8-print_variables
-dotnet build 8-print_variables
-dotnet run --project 8-print_variables
+dotnet new console -o 9-print_specifiers
+dotnet build 9-print_specifiers
+dotnet run --project 9-print_specifiers
