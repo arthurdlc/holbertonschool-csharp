@@ -7,5 +7,4 @@ if [ -d "1-new_project" ]; then
 else
     echo "The folder '1-new_project' does not exist. Creating a new project..."
     dotnet new console -o 1-new_project
-fi
 # Create a new console application project
