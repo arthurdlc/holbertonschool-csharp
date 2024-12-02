@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-dotnet new console -o 7-concat
-dotnet build 7-concat
-dotnet run --project 7-concat
+dotnet new console -o 8-print_variables
+dotnet build 8-print_variables
+dotnet run --project 8-print_variables
