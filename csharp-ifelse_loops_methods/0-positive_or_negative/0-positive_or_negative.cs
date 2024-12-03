@@ -4,22 +4,19 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Ne pas modifier cette ligne
         Random rndm = new Random();
-        int number = rndm.Next(-10, 10); // Génère un nombre aléatoire entre -10 et 10
-
-        // Vérification et affichage des résultats
-        if (number > 0):
+        int number = rndm.Next(-10, 10);
+        if (number > 0)
         {
-            Console.WriteLine("{0} is positive", number);
+            Console.WriteLine($"{number} is positive");
         }
-        else if (number < 0):
+        else if (number < 0)
         {
-            Console.WriteLine("{0} is negative", number);
+            Console.WriteLine($"{number} is negative");
         }
-        else:
+        else
         {
-            Console.WriteLine("{0} is zero", number);
+            Console.WriteLine($"{number} is zero");
         }
     }
 }
