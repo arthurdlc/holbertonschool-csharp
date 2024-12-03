@@ -4,16 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
+        string alphabet = "";
+
         for (char c = 'a'; c <= 'z'; c++)
         {
-            if(c!='e' && c!='q')
+            if (c != 'e' && c != 'q')
             {
-                Console.Write(c);
-            }    
-            else
-            {
-                Console.Write();
+                alphabet += c;
             }
         }
+
+        Console.Write(alphabet);
     }
 }
