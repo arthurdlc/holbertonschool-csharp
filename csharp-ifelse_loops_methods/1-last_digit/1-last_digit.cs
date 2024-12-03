@@ -9,7 +9,7 @@ class Program
 
         int lastDigit = Math.Abs(number % 10); // On calcule le dernier chiffre absolu
 
-        Console.Write($"The last digit of {number} is {lastDigit} and is "); // Message de base
+        Console.Write("The last digit of {0} is {1} and is ", number,lastDigit); // Message de base
 
         if (lastDigit > 5)
         {
