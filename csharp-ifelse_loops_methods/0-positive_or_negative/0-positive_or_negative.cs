@@ -10,11 +10,14 @@ class Program
         switch (number)
         {
             case < 0:
-                Console.WriteLine("{0} is negative", number);                break;
+                Console.WriteLine("{0} is negative", number);
+                break;
             case > 0:
-                Console.WriteLine("{0} is positive", number);                break;
+                Console.WriteLine("{0} is positive", number);
+                break;
             default:
-                Console.WriteLine("{0} is zero", number);                break;
+                Console.WriteLine("{0} is zero", number);
+                break;
         }
     }
 }
