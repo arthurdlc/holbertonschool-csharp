@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-dotnet new console -o 9-print_specifiers
-dotnet build 9-print_specifiers
-dotnet run --project 9-print_specifiers
+dotnet new console -o 10-copy_cut_paste
+dotnet build 10-copy_cut_paste
+dotnet run --project 10-copy_cut_paste
