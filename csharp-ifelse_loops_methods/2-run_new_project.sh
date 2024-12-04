@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-dotnet new console -o 8-print_last_digit
-dotnet build 8-print_last_digit
-dotnet run --project 8-print_last_digit
+dotnet new console -o 9-add
+dotnet build 9-add
+dotnet run --project 9-add
