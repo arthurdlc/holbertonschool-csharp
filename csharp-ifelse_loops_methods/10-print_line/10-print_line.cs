@@ -15,13 +15,3 @@ class Number
         Console.WriteLine("$"); // Ajoute un symbole `$` à la fin de la ligne
     }
 }
-
-// Exemple d'utilisation
-class Program
-{
-    static void Main()
-    {
-        Number.PrintLine(5); // Produit "_____$"
-        Number.PrintLine(-3); // Produit "$" (car length est réglé à 0)
-    }
-}
