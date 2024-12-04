@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-dotnet new console -o 4-print_hexa
-dotnet build 4-print_hexa
-dotnet run --project 4-print_hexa
+dotnet new console -o 5-print_comb
+dotnet build 5-print_comb
+dotnet run --project 5-print_comb
