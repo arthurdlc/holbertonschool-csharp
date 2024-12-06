@@ -12,7 +12,9 @@ class Line
 
         for (int i = 0; i < length; i++)
         {
-            Console.WriteLine(new string(' ', i) + "\\");
+            // Ajout d'une gestion stricte des espaces
+            Console.Write(new string(' ', i));
+            Console.WriteLine("\\");
         }
     }
 }
