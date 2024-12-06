@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-dotnet new console -o 10-print_line
-dotnet build 10-print_line
-dotnet run --project 10-print_line
+dotnet new console -o 11-print_diagonal
+dotnet build 11-print_diagonal
+dotnet run --project 11-print_diagonal
