@@ -1,0 +1,15 @@
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at.deps.json
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at.runtimeconfig.json
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at.dll
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at.pdb
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.AssemblyInfoInputs.cache
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.AssemblyInfo.cs
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.csproj.CoreCompileInputs.cache
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.sourcelink.json
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.dll
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/refint/1-element_at.dll
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.pdb
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.genruntimeconfig.cache
+/home/arthur/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/ref/1-element_at.dll
