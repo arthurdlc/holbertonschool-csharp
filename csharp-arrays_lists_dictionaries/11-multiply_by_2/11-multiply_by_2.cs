@@ -1,27 +1,15 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-class Program
+class Dictionary
 {
-    static void Main(string[] args)
+    public static Dictionary<string, int> MultiplyBy2(Dictionary<string, int> myDict)
     {
-        Dictionary<string, int> myDict = new Dictionary<string, int>();
-        Dictionary<string, int> newDict = new Dictionary<string, int>();
-
-        myDict.Add("John", 12);
-        myDict.Add("Alex", 8);
-        myDict.Add("Bob", 14);
-        myDict.Add("Mary", 14);
-        myDict.Add("Molly", 16);
-
-        newDict = Dictionary.MultiplyBy2(myDict);
-
-        foreach (KeyValuePair<string, int> entry in myDict)
-            Console.WriteLine("{0}: {1}", entry.Key, entry.Value);
-
-        Console.WriteLine("--------------------");
-
-        foreach (KeyValuePair<string, int> entry in newDict)
-            Console.WriteLine("{0}: {1}", entry.Key, entry.Value);
+        Dictionary<string, int> newDict = new Dictionary<string, int> ();
+        foreach (KeyValuePair<string, int> value in myDict) {
+            int newValue = value.Value * 2;
+            newDict.Add(value.Key, newValue);
+        }
+        return newDict;
     }
 }
