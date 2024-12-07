@@ -1,18 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-class Program
+class Dictionary
 {
-    static void Main(string[] args)
+    public static void PrintSorted(Dictionary<string, string> myDict)
     {
-        Dictionary<string, string> myDict = new Dictionary<string, string>();
+        List<string> newList = new List<string> ();
+        newList = myDict.Keys.ToList();
+        newList.Sort();
 
-        myDict.Add("language", "C");
-        myDict.Add("track", "low level");
-        myDict.Add("school", "Holberton");
-        myDict.Add("address", "972 Mission St.");
-        myDict.Add("city", "San Francisco");
-
-        Dictionary.PrintSorted(myDict);
+        foreach (var key in newList) {
+            Console.WriteLine("{0}: {1}", key, myDict[key]);
+        }
     }
 }
