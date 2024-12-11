@@ -10,10 +10,7 @@ class MyQueue
         if (Nitems <= 0)
             Console.WriteLine("Queue is empty"); // c'est vide on le dit
         else  
-        {
             Console.WriteLine("Top item: {0}", aQueue.Peek());//  sinon on print le premier item
-        }
-        aQueue.Enqueue("newItem ");
         if (!aQueue.Contains(search))
             Console.WriteLine("Stack contains \"{0}\": False", search);// si il n'y a pas l'element search
         else
@@ -22,7 +19,7 @@ class MyQueue
             while (aQueue.Contains(search))
                 aQueue.Dequeue(); //  si il y est on degage tt jusqu'a l'element
         }
-        aQueue.Push(newItem);
+        aQueue.Enqueue(newItem);
         return (aQueue); // et on retourne la stack
     }
 }
