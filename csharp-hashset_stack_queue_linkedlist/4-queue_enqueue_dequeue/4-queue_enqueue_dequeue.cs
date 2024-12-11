@@ -11,6 +11,7 @@ class MyQueue
             Console.WriteLine("Queue is empty"); // c'est vide on le dit
         else  
             Console.WriteLine("Top item: {0}", aQueue.Peek());//  sinon on print le premier item
+            
         if (!aQueue.Contains(search))
             Console.WriteLine("Queue contains \"{0}\": False", search);// si il n'y a pas l'element search
         else
