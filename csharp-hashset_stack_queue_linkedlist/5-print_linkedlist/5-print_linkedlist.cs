@@ -7,8 +7,9 @@ class LList
     {
         LinkedList<int> linkedList = new LinkedList<int>();
         if(size <  0)
+        {
             return linkedList; // on renvoie une liste vide
-
+        }
         for (int i = 0; i < size; i++)
         {
             linkedList.AddLast(i);
