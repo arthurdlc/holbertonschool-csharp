@@ -6,14 +6,16 @@ class LList
     public static LinkedList<int> CreatePrint(int size)
     {
         LinkedList<int> linkedList = new LinkedList<int>();
-        if(size <  0)
+
+        if (size < 0)
         {
-            return linkedList; // on renvoie une liste vide
+            return linkedList; // Return an empty list if size is negative
         }
+
         for (int i = 0; i < size; i++)
         {
             linkedList.AddLast(i);
-            Console.WWriteLine(;);
+            Console.WriteLine(i);
         }
 
         return linkedList;
