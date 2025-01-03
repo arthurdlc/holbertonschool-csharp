@@ -1,30 +1,30 @@
 using System;
 using System.Collections.Generic;
 
-public class List
+class List
 {
     public static List<int> Divide(List<int> list1, List<int> list2, int listLength)
     {
-        List<int> result = new List<int>();
-        int i= 0;
+        List<int> r = new List<int>();
+        int i = 0;
 
         while(i < listLength)
         {
             try
             {
-                result.Add(list1[i] / list2[i]);
+                r.Add(list1[i]/list2[i]);
             }
             catch (DivideByZeroException)
             {
                 Console.WriteLine("Cannot divide by zero");
-                result.Add(0); // Ajoute 0 si la division par zéro est détectée
+                r.Add(0);
             }
             catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("Out of range");
+                Console.WriteLine("Out of range");  
             }
-            i++
+            i++;
         }
-        return result;
+        return r;
     }
 }
