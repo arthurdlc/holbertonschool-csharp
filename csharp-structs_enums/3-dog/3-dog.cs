@@ -2,8 +2,8 @@ using System;
 
 public enum Rating
 {
-    Poor,
     Good,
+    Great,
     Excellent
 }
 
