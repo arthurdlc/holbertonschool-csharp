@@ -18,8 +18,9 @@ struct Dog
         this.owner = owner;
         this.rating = rating;
     }
-    public string name.ToString();   // nom
-    public float age.ToString();     // age
-    public string owner.ToString();  // owner
-    public Rating rating.ToString(); // Dog's rating
+    public string name;   // nom
+    public float age;     // age
+    public string owner;  // owner
+    public Rating rating; // Dog's rating
+    public override string ToString() => $"Dog: {name} is {age} years old and owned by {owner} with a rating of {rating}.";
 }
