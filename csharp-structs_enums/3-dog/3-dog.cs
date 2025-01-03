@@ -22,5 +22,8 @@ struct Dog
     public float age;     // age
     public string owner;  // owner
     public Rating rating; // Dog's rating
-    public override string ToString() => $"Dog Name: {Name}\nAge: {Age}\nOwner: {Owner}\nRating: {DogRating}";
+    public override string ToString()
+    {
+        return $"Dog Name: {Name}\nAge: {Age}\nOwner: {Owner}\nRating: {DogRating}";
+    }
 }
