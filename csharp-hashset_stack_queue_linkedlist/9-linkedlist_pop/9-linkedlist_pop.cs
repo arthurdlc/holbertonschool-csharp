@@ -5,15 +5,14 @@ class LList
 {
     public static int Pop(LinkedList<int> myLList)
     {
-        int index = 0;
-        foreach (int item in myLList)
+
+        if (myLList.Count == 0)
         {
-            if (item == value)
-            {
-                return index;
-            }
-            index++;
+            return 0; // Return 0 if the list is empty
         }
-        return -1; // Return -1 if the value is not found
+
+        int value = myLList.First.Value;
+        myLList.RemoveFirst();
+        return value;
     }
 }
