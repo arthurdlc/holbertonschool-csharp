@@ -1,0 +1,14 @@
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/bin/Debug/netcoreapp2.1/8-print_variables.deps.json
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/bin/Debug/netcoreapp2.1/8-print_variables.runtimeconfig.json
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/bin/Debug/netcoreapp2.1/8-print_variables.runtimeconfig.dev.json
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/bin/Debug/netcoreapp2.1/8-print_variables.dll
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/bin/Debug/netcoreapp2.1/8-print_variables.pdb
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.csproj.AssemblyReference.cache
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.AssemblyInfoInputs.cache
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.AssemblyInfo.cs
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.csproj.CoreCompileInputs.cache
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.sourcelink.json
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.dll
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.pdb
+/home/arthur/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/netcoreapp2.1/8-print_variables.genruntimeconfig.cache
