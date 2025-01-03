@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-class List
+public class List
 {
     public static List<int> Divide(List<int> list1, List<int> list2, int listLength)
     {
@@ -11,24 +11,17 @@ class List
         {
             try
             {
-                if (i >= list1.Count || i >= list2.Count)
-                {
-                    Console.WriteLine("Out of range");
-                    result.Add(0);
-                }
-                else if (list2[i] == 0)
-                {
-                    Console.WriteLine("Cannot divide by zero");
-                    result.Add(0);
-                }
-                else
-                {
-                    result.Add(list1[i] / list2[i]);
-                }
+                result.Add(list1[i] / list2[i]);
             }
-            catch (Exception)
+            catch (DivideByZeroException)
             {
-                result.Add(0);
+                Console.WriteLine("Cannot divide by zero");
+                result.Add(0); // Ajoute 0 si la division par zéro est détectée
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Out of range");
+                result.Add(0); // Ajoute 0 si l'index dépasse la taille d'une des listes
             }
         }
 
