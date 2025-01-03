@@ -19,7 +19,7 @@ public class List
                 Console.WriteLine("Cannot divide by zero");
                 result.Add(0); // Ajoute 0 si la division par zéro est détectée
             }
-            catch (IndexOutOfRangeException)
+            catch (ArgumentOutOfRangeException)
             {
                 Console.WriteLine("Out of range");
                 result.Add(0); // Ajoute 0 si l'index dépasse la taille d'une des listes
