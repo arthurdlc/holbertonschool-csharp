@@ -24,6 +24,7 @@ public class List
                 Console.WriteLine("Out of range");
                 result.Add(0); // Ajoute 0 si l'index dépasse la taille d'une des listes
             }
+            i++
         }
 
         return result;
