@@ -26,12 +26,12 @@ public class List
             catch (DivideByZeroException)
             {
                 Console.WriteLine("Cannot divide by zero");
-                result.Add(0); // Ajouter 0 en cas de division par zéro
+                result.Add(0); // Ajoute 0 si la division par zéro est détectée
             }
             catch (IndexOutOfRangeException)
             {
                 Console.WriteLine("Out of range");
-                result.Add(0); // Ajouter 0 si une des listes est trop courte
+                result.Add(0); // Ajoute 0 si l'index dépasse la taille d'une des listes
             }
         }
 
