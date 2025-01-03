@@ -1,16 +1,20 @@
 using System;
 
-// Define the Rating enum
-enum Rating
+public enum Rating
 {
-    Good,       // 0
-    Great,      // 1
-    Excellent   // 2
+    Poor,
+    Good,
+    Excellent
 }
 
-// Define the Dog struct
-struct Dog
+public struct Dog
 {
+    public string name;
+    public float age;
+    public string owner;
+    public Rating rating;
+
+    // Constructor for Dog struct
     public Dog(string name, float age, string owner, Rating rating)
     {
         this.name = name;
@@ -18,12 +22,10 @@ struct Dog
         this.owner = owner;
         this.rating = rating;
     }
-    public string name;   // nom
-    public float age;     // age
-    public string owner;  // owner
-    public Rating rating; // Dog's rating
+
+    // Override ToString() method
     public override string ToString()
     {
-        return $"Dog Name: {Name}\nAge: {Age}\nOwner: {Owner}\nRating: {DogRating}";
+        return $"Dog Name: {name}\nAge: {age}\nOwner: {owner}\nRating: {rating}";
     }
 }
