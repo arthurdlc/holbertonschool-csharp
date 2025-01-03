@@ -1,0 +1,18 @@
+using System;
+
+// Define the Rating enum
+enum Rating
+{
+    Good,       // 0
+    Great,      // 1
+    Excellent   // 2
+}
+
+// Define the Dog struct
+struct Dog
+{
+    public string name;   // nom
+    public float age;     // age
+    public string owner;  // owner
+    public Rating rating; // Dog's rating
+}
