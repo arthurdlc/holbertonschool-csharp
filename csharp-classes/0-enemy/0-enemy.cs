@@ -1,9 +1,7 @@
-using System;
-
 namespace Enemies
 {
     /// <summary>
-    /// Defines a Zombie.
+    /// c'est un zombie mgl
     /// </summary>
     public class Zombie
     {
