@@ -2,7 +2,9 @@ using System;
 
 namespace Enemies
 {
-    // <Summary>blueprint for zombie.</Summary>    
+    /// <summary>
+    /// Blueprint for zombie.
+    /// </summary>
     public class Zombie
     {
     }
