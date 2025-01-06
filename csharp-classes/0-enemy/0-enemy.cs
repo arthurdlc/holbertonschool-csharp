@@ -1,8 +1,8 @@
+using System;
+
 namespace Enemies
 {
-    /// <summary>
-    /// c'est un zombie mgl
-    /// </summary>
+    /// <Summary>Représents a blueprint for zombie</Summary>
     public class Zombie
     {
     }
