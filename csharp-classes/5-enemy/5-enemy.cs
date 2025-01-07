@@ -58,12 +58,12 @@ namespace Enemies
         }
 
         /// <summary>
-        /// Returns a string representation of the Zombie object.
+        /// on met la ligne du projet precedent
         /// </summary>
         /// <returns>A string in the format: Zombie Name: <name> / Total Health: <health>.</returns>
         public override string ToString()
         {
-            return $"Zombie Name: {name} / Total Health: {health}";
+            return $"Zombie Name: {Name} / Total Health: {health}";
         }
     }
 }
