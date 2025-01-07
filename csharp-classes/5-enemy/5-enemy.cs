@@ -63,7 +63,7 @@ namespace Enemies
         /// <returns>A string in the format: Zombie Name: <name> / Total Health: <health>.</returns>
         public override string ToString()
         {
-            return $"Zombie Name: {Name} / Total Health: {health}";
+            return $"Zombie Name: {name} / Total Health: {health}";
         }
     }
 }
