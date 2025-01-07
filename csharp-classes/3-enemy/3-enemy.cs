@@ -34,6 +34,10 @@ namespace Enemies
             health = value;
         }
 
+        /// <summary>
+        /// Returns the health of the zombie.
+        /// </summary>
+        /// <returns>The health of the zombie.</returns>
         public int GetHealth()
         {
             return health;
