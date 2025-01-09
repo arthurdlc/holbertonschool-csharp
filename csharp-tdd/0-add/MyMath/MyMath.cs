@@ -1,8 +1,10 @@
-﻿namespace MyMath;
-public class Operations
+﻿namespace MyMath
 {
-    public static int Add(int a, int b)
+    public class Operations
     {
-        return a + b;
+        public static int Add(int a, int b)
+        {
+            return a + b;
+        }
     }
 }
