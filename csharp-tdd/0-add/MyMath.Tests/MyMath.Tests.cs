@@ -1,71 +1,30 @@
 using NUnit.Framework;
 using MyMath;
-using System;
 
 namespace MyMath.Tests
 {
-    /// <summary>Class for testing Operations.Add function.</summary>
     [TestFixture]
-    public class AddTests
+    public class OperationsTests
     {
-        /// <summary>Test when a and b are positives.</summary>
         [Test]
-        public void TestAetBPositifs()
+        public void Add_TwoPositiveNumbers_ReturnsCorrectSum()
         {
-            // Arrange
-            int a = 10;
-            int b = 20;
-
-            // Act
-            int output = Operations.Add(a, b);
-
-            // Assert
-            Assert.AreEqual(30, output);
+            Assert.AreEqual(5, Operations.Add(2, 3));
         }
-
-        /// <summary>Test when a is positive and b is negative.</summary>
         [Test]
-        public void TestAPositifetBNegatif()
+        public void Add_PositiveAndNegativeNumber_ReturnsCorrectSum()
         {
-            // Arrange
-            int a = 10;
-            int b = -20;
-
-            // Act
-            int output = Operations.Add(a, b);
-
-            // Assert
-            Assert.AreEqual(-10, output);
+            Assert.AreEqual(2, Operations.Add(5, -3));
         }
-
-        /// <summary>Test when a and b are negatives.</summary>
         [Test]
-        public void TestAetBNegatifs()
+        public void Add_TwoNegativeNumbers_ReturnsCorrectSum()
         {
-            // Arrange
-            int a = -10;
-            int b = -20;
-
-            // Act
-            int output = Operations.Add(a, b);
-
-            // Assert
-            Assert.AreEqual(-30, output);
+            Assert.AreEqual(-10, Operations.Add(-4, -6));
         }
-
-        /// <summary>Test when a is equal to zero and b is non equal to zero.</summary>
         [Test]
-        public void TestANulletBNonNull()
+        public void Add_NumberAndZero_ReturnsSameNumber()
         {
-            // Arrange
-            int a = 0;
-            int b = 20;
-
-            // Act
-            int output = Operations.Add(a, b);
-
-            // Assert
-            Assert.AreEqual(20, output);
+            Assert.AreEqual(7, Operations.Add(7, 0));
         }
     }
 }
