@@ -1,0 +1,5 @@
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-tdd\0-add\MyMath.Tests\obj\Debug\netcoreapp2.1\MyMath.Tests.csproj.AssemblyReference.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-tdd\0-add\MyMath.Tests\obj\Debug\netcoreapp2.1\MyMath.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-tdd\0-add\MyMath.Tests\obj\Debug\netcoreapp2.1\MyMath.Tests.AssemblyInfoInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-tdd\0-add\MyMath.Tests\obj\Debug\netcoreapp2.1\MyMath.Tests.AssemblyInfo.cs
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-tdd\0-add\MyMath.Tests\obj\Debug\netcoreapp2.1\MyMath.Tests.csproj.CoreCompileInputs.cache
