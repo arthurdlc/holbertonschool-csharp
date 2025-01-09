@@ -6,11 +6,7 @@ namespace MyMath.Tests
     [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-            // Cette méthode est exécutée avant chaque test. Tu peux l'utiliser pour configurer des pré-requis si nécessaire.
-        }
+        
 
         [Test]
         public void Add_TwoPositiveNumbers_ReturnsSum()
