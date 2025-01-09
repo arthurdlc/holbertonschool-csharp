@@ -1,4 +1,6 @@
-﻿namespace MyMath
+﻿using System;
+
+namespace MyMath
 {
     /// <summary>
     /// Class for operations
