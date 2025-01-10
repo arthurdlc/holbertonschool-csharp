@@ -1,14 +1,8 @@
-using System;
+<Project Sdk="Microsoft.NET.Sdk">
 
-namespace MyMath
-{
-    /// <summary>Class Operations.</summary>
-    public class Operations
-    {
-    /// <summary>Method that adds two numbers.</summary>
-        public static int Add(int a, int b)
-        {
-            return (a + b);
-        }
-    }
-}
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <DocumentationFile>bin$(Configuration)$(TargetFramework)$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

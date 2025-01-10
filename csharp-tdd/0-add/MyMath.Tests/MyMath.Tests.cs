@@ -1,33 +1,71 @@
 using NUnit.Framework;
+using MyMath;
+using System;
 
 namespace MyMath.Tests
 {
+    /// <summary>Class for testing Operations.Add function.</summary>
     [TestFixture]
-    /// <summary>Tests if Add method is working correctly.</summary>
-    public class Tests
+    public class AddTests
     {
+        /// <summary>Test when a and b are positives.</summary>
         [Test]
-        /// <summary>Testing with positive numbers.</summary>
-        public void Test1()
+        public void TestAetBPositifs()
         {
-            int sum = Operations.Add(7, 8);
-            Assert.AreEqual(15, sum);
+            // Arrange
+            int a = 10;
+            int b = 20;
+
+            // Act
+            int output = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(30, output);
         }
 
+        /// <summary>Test when a is positive and b is negative.</summary>
         [Test]
-        /// <summary> Testing with one negative number.</summary>
-        public void Test2()
+        public void TestAPositifetBNegatif()
         {
-            int sum = Operations.Add(-7, 8);
-            Assert.AreEqual(1, sum);
+            // Arrange
+            int a = 10;
+            int b = -20;
+
+            // Act
+            int output = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(-10, output);
         }
 
+        /// <summary>Test when a and b are negatives.</summary>
         [Test]
-        /// <summary>Testing with negative numbers.</summary>
-        public void Test3()
+        public void TestAetBNegatifs()
         {
-            int sum = Operations.Add(-7, -8);
-            Assert.AreEqual(-15, sum);
+            // Arrange
+            int a = -10;
+            int b = -20;
+
+            // Act
+            int output = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(-30, output);
+        }
+
+        /// <summary>Test when a is equal to zero and b is non equal to zero.</summary>
+        [Test]
+        public void TestANulletBNonNull()
+        {
+            // Arrange
+            int a = 0;
+            int b = 20;
+
+            // Act
+            int output = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(20, output);
         }
     }
 }
