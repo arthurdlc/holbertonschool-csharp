@@ -1,50 +1,44 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MyMath;
+using System;
 using System.Collections.Generic;
+using Xunit;
+using MyMath;
 
 namespace MyMath.Tests
 {
-    [TestClass]
     public class OperationsTests
     {
-        [TestMethod]
-        public void TestMaxWithPositiveNumbers()
+        [Fact]
+        public void Max_ListWithMultipleValues_ReturnsMaxValue()
         {
             List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
-            int result = Operations.Max(nums);
-            Assert.AreEqual(5, result);
+            Assert.Equal(5, Operations.Max(nums));
         }
 
-        [TestMethod]
-        public void TestMaxWithNegativeNumbers()
-        {
-            List<int> nums = new List<int> { -1, -2, -3, -4, -5 };
-            int result = Operations.Max(nums);
-            Assert.AreEqual(-1, result);
-        }
-
-        [TestMethod]
-        public void TestMaxWithMixedNumbers()
-        {
-            List<int> nums = new List<int> { -1, 2, -3, 4, -5 };
-            int result = Operations.Max(nums);
-            Assert.AreEqual(4, result);
-        }
-
-        [TestMethod]
-        public void TestMaxWithSingleElement()
-        {
-            List<int> nums = new List<int> { 42 };
-            int result = Operations.Max(nums);
-            Assert.AreEqual(42, result);
-        }
-
-        [TestMethod]
-        public void TestMaxWithEmptyList()
+        [Fact]
+        public void Max_EmptyList_ReturnsZero()
         {
             List<int> nums = new List<int>();
-            int result = Operations.Max(nums);
-            Assert.AreEqual(0, result);
+            Assert.Equal(0, Operations.Max(nums));
+        }
+
+        [Fact]
+        public void Max_NullList_ReturnsZero()
+        {
+            Assert.Equal(0, Operations.Max(null));
+        }
+
+        [Fact]
+        public void Max_ListWithNegativeValues_ReturnsMaxValue()
+        {
+            List<int> nums = new List<int> { -10, -20, -30, -5 };
+            Assert.Equal(-5, Operations.Max(nums));
+        }
+
+        [Fact]
+        public void Max_ListWithSingleValue_ReturnsValue()
+        {
+            List<int> nums = new List<int> { 42 };
+            Assert.Equal(42, Operations.Max(nums));
         }
     }
 }
