@@ -1,27 +1,34 @@
-﻿﻿using System;
-using System.Collections.Generic;
+﻿﻿
+﻿using System;
 
-namespace MyMath
+namespace Text
 {
-    ///<summary>Operations Class</summary>
-    public class Operations
+    ///<summary>Str Class</summary>
+    public class Str
     {
-        ///<summary>returns the max integer in a list of integers</summary>
-        public static int Max(List<int> nums)
+        ///<summary>IsPalindrome method: returns True if a string is a palindrome or False if it’s not.</summary>
+        public static bool IsPalindrome(string s)
         {
-            if (nums.Count == 0)
+            string lowerCase = s.ToLower();
+            lowerCase = lowerCase.Replace(" ", String.Empty);
+            lowerCase = lowerCase.Replace(":", String.Empty);
+            lowerCase = lowerCase.Replace(",", String.Empty);
+            lowerCase = lowerCase.Replace(".", String.Empty);
+            if (lowerCase.Length <= 1)
             {
-                return 0;
+                return true;
             }
-            int maxInt = nums[0];
-            foreach (int tmp in nums)
+            else
             {
-                if (tmp > maxInt)
+                if (lowerCase[0] != lowerCase[lowerCase.Length - 1])
                 {
-                    maxInt = tmp;
+                    return false;
+                }
+                else
+                {
+                    return IsPalindrome(lowerCase.Substring(1, lowerCase.Length - 2));
                 }
             }
-            return maxInt;
         }
     }
 }
