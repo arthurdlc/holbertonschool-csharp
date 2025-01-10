@@ -1,30 +1,27 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 
 namespace MyMath
 {
-    /// <summary>
-    /// Provides mathematical operations.
-    /// </summary>
+    ///<summary>Operations Class</summary>
     public class Operations
     {
-        /// <summary>
-        /// Returns the maximum integer in a list.
-        /// </summary>
-        /// <param name="nums">A list of integers.</param>
-        /// <returns>The maximum integer in the list, or 0 if the list is empty.</returns>
+        ///<summary>returns the max integer in a list of integers</summary>
         public static int Max(List<int> nums)
         {
-            if (nums == null || nums.Count == 0)
-                return 0;
-
-            int max = nums[0];
-            foreach (int num in nums)
+            if (nums.Count == 0)
             {
-                if (num > max)
-                    max = num;
+                return 0;
             }
-            return max;
+            int maxInt = nums[0];
+            foreach (int tmp in nums)
+            {
+                if (tmp > maxInt)
+                {
+                    maxInt = tmp;
+                }
+            }
+            return maxInt;
         }
     }
 }
