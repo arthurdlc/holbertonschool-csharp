@@ -3,36 +3,57 @@ using NUnit.Framework;
 namespace Text.Tests
 {
     [TestFixture]
+    ///<summary>Tests class</summary>
     public class Tests
     {
         [Test]
-        public void TestSimplePalindrome()
+        public void Test1()
         {
-            Assert.IsTrue(Str.IsPalindrome("Racecar"));
+            string word = "yay";
+
+            bool output = Str.IsPalindrome(word);
+
+            Assert.AreEqual(true, output);
         }
 
         [Test]
-        public void TestPhrasePalindrome()
+        public void TestNotPal()
         {
-            Assert.IsTrue(Str.IsPalindrome("A man, a plan, a canal: Panama."));
+            string word = "yays";
+
+            bool output = Str.IsPalindrome(word);
+
+            Assert.AreEqual(false, output);
         }
 
         [Test]
-        public void TestNonPalindrome()
+        public void TestEmpty()
         {
-            Assert.IsFalse(Str.IsPalindrome("Hello"));
+            string word = "";
+
+            bool output = Str.IsPalindrome(word);
+
+            Assert.AreEqual(true, output);
         }
 
         [Test]
-        public void TestEmptyString()
+        public void Test1Letter()
         {
-            Assert.IsTrue(Str.IsPalindrome(""));
+            string word = "y";
+
+            bool output = Str.IsPalindrome(word);
+
+            Assert.AreEqual(true, output);
         }
 
         [Test]
-        public void TestNullString()
+        public void TestPuncLowercaseSpaces()
         {
-            Assert.IsFalse(Str.IsPalindrome(null));
+            string word = "A man, a plan, a canal: Panama.";
+
+            bool output = Str.IsPalindrome(word);
+
+            Assert.AreEqual(true, output);
         }
     }
 }

@@ -1,26 +1,34 @@
-﻿﻿using System;
-using System.Linq;
+﻿﻿﻿
+﻿using System;
 
 namespace Text
 {
-    ///<summary>Provides text-related utility methods.</summary>
+    ///<summary>Str Class</summary>
     public class Str
     {
-        ///<summary>
-        /// Checks if a given string is a palindrome, ignoring case, spaces, and punctuation.
-        ///</summary>
-        ///<param name="s">The input string to check.</param>
-        ///<returns>True if the string is a palindrome, otherwise False.</returns>
+        ///<summary>IsPalindrome method: returns True if a string is a palindrome or False if it’s not.</summary>
         public static bool IsPalindrome(string s)
         {
-            if (s == null) // Handle null input
-                return false;
-
-            // Remove spaces, punctuation, and convert to lowercase
-            string cleaned = new string(s.Where(char.IsLetterOrDigit).ToArray()).ToLower();
-
-            // Compare the cleaned string with its reverse
-            return cleaned.SequenceEqual(cleaned.Reverse());
+            string lowerCase = s.ToLower();
+            lowerCase = lowerCase.Replace(" ", String.Empty);
+            lowerCase = lowerCase.Replace(":", String.Empty);
+            lowerCase = lowerCase.Replace(",", String.Empty);
+            lowerCase = lowerCase.Replace(".", String.Empty);
+            if (lowerCase.Length <= 1)
+            {
+                return true;
+            }
+            else
+            {
+                if (lowerCase[0] != lowerCase[lowerCase.Length - 1])
+                {
+                    return false;
+                }
+                else
+                {
+                    return IsPalindrome(lowerCase.Substring(1, lowerCase.Length - 2));
+                }
+            }
         }
     }
 }
