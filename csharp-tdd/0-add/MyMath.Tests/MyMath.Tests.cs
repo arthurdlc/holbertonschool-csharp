@@ -1,71 +1,33 @@
 using NUnit.Framework;
-using MyMath;
-using System;
 
 namespace MyMath.Tests
 {
-    /// <summary>Class for testing Operations.Add function.</summary>
     [TestFixture]
-    public class AddTests
+    /// <summary>Tests if Add method is working correctly.</summary>
+    public class Tests
     {
-        /// <summary>Test when a and b are positives.</summary>
         [Test]
-        public void TestAetBPositifs()
+        /// <summary>Testing with positive numbers.</summary>
+        public void Test1()
         {
-            // Arrange
-            int a = 10;
-            int b = 20;
-
-            // Act
-            int output = Operations.Add(a, b);
-
-            // Assert
-            Assert.AreEqual(30, output);
+            int sum = Operations.Add(7, 8);
+            Assert.AreEqual(15, sum);
         }
 
-        /// <summary>Test when a is positive and b is negative.</summary>
         [Test]
-        public void TestAPositifetBNegatif()
+        /// <summary> Testing with one negative number.</summary>
+        public void Test2()
         {
-            // Arrange
-            int a = 10;
-            int b = -20;
-
-            // Act
-            int output = Operations.Add(a, b);
-
-            // Assert
-            Assert.AreEqual(-10, output);
+            int sum = Operations.Add(-7, 8);
+            Assert.AreEqual(1, sum);
         }
 
-        /// <summary>Test when a and b are negatives.</summary>
         [Test]
-        public void TestAetBNegatifs()
+        /// <summary>Testing with negative numbers.</summary>
+        public void Test3()
         {
-            // Arrange
-            int a = -10;
-            int b = -20;
-
-            // Act
-            int output = Operations.Add(a, b);
-
-            // Assert
-            Assert.AreEqual(-30, output);
-        }
-
-        /// <summary>Test when a is equal to zero and b is non equal to zero.</summary>
-        [Test]
-        public void TestANulletBNonNull()
-        {
-            // Arrange
-            int a = 0;
-            int b = 20;
-
-            // Act
-            int output = Operations.Add(a, b);
-
-            // Assert
-            Assert.AreEqual(20, output);
+            int sum = Operations.Add(-7, -8);
+            Assert.AreEqual(-15, sum);
         }
     }
 }

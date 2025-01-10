@@ -2,17 +2,13 @@
 
 namespace MyMath
 {
-    /// <summary>
-    /// Class for operations
-    /// </summary>
+    /// <summary>Class Operations.</summary>
     public class Operations
     {
-        /// <summary>
-        /// Adds two integers
-        /// </summary>
+    /// <summary>Method that adds two numbers.</summary>
         public static int Add(int a, int b)
         {
-            return a + b;
+            return (a + b);
         }
     }
 }
