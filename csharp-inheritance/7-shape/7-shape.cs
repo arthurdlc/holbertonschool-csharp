@@ -1,4 +1,5 @@
-using System;
+
+﻿using System;
 
 /// <summary>
 /// Class for shape
@@ -31,7 +32,7 @@ class Rectangle : Shape
             if (value < 0) throw new ArgumentException("Width must be greater than or equal to 0");
             width = value;
         }
-    }   
+    }
     public int Height
     {
         get => height;
@@ -41,13 +42,21 @@ class Rectangle : Shape
             height = value;
         }
     }
-    public override int Area()
+/// <summary>
+/// Calculate the area of a rectangle.
+/// </summary>
+/// <returns></returns>
+    public new int Area()
     {
         return width * height;
     }
 
+/// <summary>
+/// Return a string representation of the rectangle.
+/// </summary>
+/// <returns></returns>
     public override string ToString()
     {
-        return $"Rectangle: Width={width}, Height={height}, Area={Area()}";
+        return $"[Rectangle] {width} / {height}";
     }
 }
