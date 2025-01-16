@@ -3,7 +3,7 @@ using System;
 /// <summary>
 /// Class Shape/// 
 /// </summary>
-public class Shape
+class Shape
 {
     /// <summary>
     /// Area method
@@ -18,22 +18,13 @@ public class Shape
 /// <summary>
 /// Class Rectangle
 /// </summary>
-public class Rectangle : Shape
+class Rectangle : Shape
 {
     /// <summary>
     /// Private fields
     /// </summary>
     private int width;
     private int height;
-
-    /// <summary>
-    /// Constructor
-    /// </summary>
-    public Rectangle(int width, int height)
-    {
-        Width = width;
-        Height = height;
-    }
     public int Width
     {
         get { return width; }
@@ -44,11 +35,6 @@ public class Rectangle : Shape
             width = value;
         }
     }
-
-    /// <summary>
-    /// Height///
-    /// </summary>
-    /// <value></value>//  
     public int Height
     {
         get { return height; }
