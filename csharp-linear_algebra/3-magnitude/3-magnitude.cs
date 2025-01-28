@@ -10,14 +10,12 @@ class VectorMath
     public static double Magnitude(double[] vector)
     {
         // Calculate the magnitude
-        if (vector == null || vector.Length == 0)
-        {
-            double sum = 0;
-            for (int i = 0; i < vector.Length; i++)
-            {
-                sum += Math.Pow(vector[i], 2);
-            }
-            return Math.Sqrt(sum);
-        }
+        if (vector.Length < 2 || vector.Length > 3)
+            return -1;
+        double sum = 0;
+        foreach (double vectron in vector)
+            sum += vectron * vectron;
+        
+        return Math.Round(Math.Sqrt(sum), 2);
     }
 }
