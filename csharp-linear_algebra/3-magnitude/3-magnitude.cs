@@ -7,7 +7,7 @@ class VectorMath
         double sum = 0;
         for (int i = 0; i < vector.Length; i++)
         {
-            sum += vector[i] ** 2;
+            sum += Math.Pow(vector[i], 2);
         }
         return Math.Sqrt(sum);
     }
