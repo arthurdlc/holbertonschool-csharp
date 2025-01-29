@@ -5,18 +5,37 @@ using System;
 /// </summary>
 public class VectorMath
 {
-    public static double[,] Add(double[,] matrix1, double[,] matrix2)
+    /// <summary>
+    /// Multiplies two matrices together if dimensions are compatible.
+    /// </summary>
+    /// <param name="matrix1">First matrix (m x n)</param>
+    /// <param name="matrix2">Second matrix (n x p)</param>
+    /// <returns>Resulting matrix (m x p) or {{-1}} if dimensions are invalid</returns>
+    public static double[,] Multiply(double[,] matrix1, double[,] matrix2)
     {
-        if (matrix1.GetLength(0) != matrix2.GetLength(0) || matrix1.GetLength(1) != matrix2.GetLength(1))
-            return new double[,] { { -1 } };
+        int rowsA = matrix1.GetLength(0);
+        int colsA = matrix1.GetLength(1);
+        int rowsB = matrix2.GetLength(0);
+        int colsB = matrix2.GetLength(1);
 
-        double[,] result = new double[matrix1.GetLength(0), matrix1.GetLength(1)];
-        for (int i = 0; i < matrix1.GetLength(0); i++)
+        // Vérifier si la multiplication est possible
+        if (colsA != rowsB)
+            return new double[,] { { -1 } }; // Indique une erreur de dimension
+
+        double[,] result = new double[rowsA, colsB];
+
+        for (int i = 0; i < rowsA; i++)  // Parcourt les lignes de A
         {
-            for (int j = 0; j < matrix1.GetLength(1); j++)
+            for (int j = 0; j < colsB; j++)  // Parcourt les colonnes de B
             {
-                result[i, j] = matrix1[i, j] + matrix2[i, j];
+                double sum = 0;
+                for (int k = 0; k < colsA; k++)  // Somme des produits élémentaires
+                {
+                    sum += matrix1[i, k] * matrix2[k, j];
+                }
+                result[i, j] = sum;
             }
         }
+        return result;
     }
 }
