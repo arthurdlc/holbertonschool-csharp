@@ -12,14 +12,12 @@ using System;
         /// <returns></returns>
         public static double[,] MultiplyScalar(double[,] matrix, double scalar)
         {
-            int matrixRowLength = matrix.GetLength(0);
-            int matrixColLength = matrix.GetLength(1);
-            if ((matrixRowLength != 2 && matrixRowLength != 3))
-                return new double[,] { {-1}};
+            if ((matrix.GetLength(0) != 2 && matrix.GetLength(0) != 3) || (matrix.GetLength(1) != 2 && matrix.GetLength(1) != 3))
+                return new double[,] { { -1 } };
             
-            double[,] result = new double[matrixRowLength, matrixColLength];
-            for (int i = 0; i < matrixRowLength; i++)
-                for (int y = 0; y < matrixColLength; y++)
+            double[,] result = new double[matrix.GetLength(0), matrix.GetLength(1)];
+            for (int i = 0; i < matrix.GetLength(0); i++)
+                for (int y = 0; y < matrix.GetLength(1); y++)
                     result[i, y] = matrix[i, y] * scalar;
             return result;
         }
