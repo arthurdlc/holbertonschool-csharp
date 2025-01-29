@@ -6,9 +6,10 @@ using System;
     class MatrixMath
     {
         /// <summary>
-        /// add two matrices
+        /// Multiply a matrix by a scalar
         /// </summary>
         /// <param name="matrix"></param>
+        /// <param name="scalar"></param>
         /// <returns></returns>
         public static double[,] MultiplyScalar(double[,] matrix, double scalar)
         {
