@@ -1,34 +1,41 @@
 using System;
 
-public class MatrixMath
+/// <summary>
+/// class for matrix math
+/// </summary>
+class MatrixMath
 {
+    /// <summary>
+    /// rotate a 2d matrix given an angle in radians
+    /// </summary>
+    /// <param name="matrix"></param>
+    /// <param name="angle"></param>
+    /// <returns></returns>
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
-        int rows = matrix.GetLength(0);
-        int cols = matrix.GetLength(1);
+        int matrixRows = matrix.GetLength(0);
+        int matrixCols = matrix.GetLength(1);
 
-        // Check if the matrix is square (required for valid rotation)
-        if (rows != cols)
-        {
+        if (matrixRows != 2 || matrixCols != 2)
             return new double[,] { { -1 } };
-        }
 
-        double[,] rotationMatrix = new double[,] 
+        double[,] rotate = new double[2, 2] { { Math.Cos(angle), Math.Sin(angle) }, { -1 * Math.Sin(angle), Math.Cos(angle) } };
+
+        if (matrixCols != rotate.GetLength(0))
+            return new double[,] { { -1 } };
+
+        double[,] result = new double[matrixRows, rotate.GetLength(1)];
+
+        for (int i = 0; i < matrixRows; i++)
         {
-            { Math.Cos(angle), Math.Sin(angle) },
-            { -1 * Math.Sin(angle), Math.Cos(angle) }
-        };
-
-        double[,] result = new double[rows, cols];
-
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < rotate.GetLength(1); j++)
             {
-                result[i, j] = matrix[i, 0] * rotationMatrix[0, j] + matrix[i, 1] * rotationMatrix[1, j];
+                result[i, j] = 0;
+                for (int k = 0; k < matrixRows; k++)
+                    result[i, j]  += matrix[i, k] * rotate[k, j];
+                result[i, j] = Math.Round(result[i, j], 2);
             }
         }
-        
         return result;
     }
 }
