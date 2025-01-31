@@ -6,55 +6,36 @@ using System;
 class MatrixMath
 {
     /// <summary>
-    /// rotate a 2d matrix given an angle in radians
+    /// shear a 2d matrix given a direction and a factor
     /// </summary>
     /// <param name="matrix"></param>
-    /// <param name="angle"></param>
+    /// <param name="direction"></param>
+    /// <param name="factor"></param>
     /// <returns></returns>
-   public static double[,] Shear2D(double[,] matrix, char direction, double factor)
+    public static double[,] Shear2D(double[,] matrix, char direction, double factor)
     {
-        int rows = matrix.GetLength(0);
-        int cols = matrix.GetLength(1);
+        int matrixRows = matrix.GetLength(0);
+        int matrixCols = matrix.GetLength(1);
 
-        // Check if the matrix is square.
-        if (rows != cols)
-        {
+        if (matrixRows != matrixCols || matrixRows != 2 || (direction != 'x' && direction != 'y'))
             return new double[,] { { -1 } };
-        }
 
-        // Check if the direction is valid.
-        if (direction != 'x' && direction != 'y')
-        {
-            return new double[,] { { -1 } };
-        }
+        double[,] result = new double[matrixRows, matrixCols];
+        double[,] shear = new double[2, 2] {{1, 0}, {0, 1}};
 
-        // Create the shear matrix.
-        double[,] shearMatrix;
         if (direction == 'x')
-        {
-            shearMatrix = new double[,] { { 1, factor }, { 0, 1 } };
-        }
-        else
-        {
-            shearMatrix = new double[,] { { 1, 0 }, { factor, 1 } };
-        }
+            shear[1, 0] = factor;
+        else if (direction == 'y')
+            shear[0, 1] = factor;
 
-        // Create the result matrix.
-        double[,] result = new double[rows, cols];
-
-        // Multiply the shear matrix by the original matrix.
-        for (int i = 0; i < rows; i++)
+        for (int i = 0; i < matrixRows; i++)
         {
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < matrixCols; j++)
             {
-                result[i, j] = 0;
-                for (int k = 0; k < cols; k++)
-                {
-                    result[i, j] += shearMatrix[i, k] * matrix[k, j];
-                }
+                for (int k = 0; k < 2; k++)  
+                    result[i, j] += (matrix[i, k] * shear[k, j]);
             }
         }
-
         return result;
     }
 }
