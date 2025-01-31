@@ -4,13 +4,8 @@ using System;
 /// Class for matrix math
 /// </summary>
 /// 
-class MatrixMath
+class VectorMath
 {
-    /// <summary>
-    /// Calculate the determinant of a matrix
-    /// </summary>
-    /// <param name="matrix"></param>
-    /// <returns></returns>
     public static double[] CrossProduct(double[] vector1, double[] vector2)
     {
         if (vector1.Length != 3 || vector2.Length != 3)
