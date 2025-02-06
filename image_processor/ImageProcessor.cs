@@ -17,22 +17,38 @@ public class ImageProcessor
                     int width = original.Width;
                     int height = original.Height;
 
-                    // Inverser les couleurs
-                    for (int y = 0; y < height; y++)
+                    // LockBits pour accès rapide aux pixels
+                    BitmapData bitmapData = original.LockBits(
+                        new Rectangle(0, 0, width, height),
+                        ImageLockMode.ReadWrite,
+                        original.PixelFormat
+                    );
+
+                    int bytesPerPixel = Image.GetPixelFormatSize(original.PixelFormat) / 8;
+                    int stride = bitmapData.Stride;
+                    IntPtr scan0 = bitmapData.Scan0;
+                    int bytes = Math.Abs(stride) * height;
+                    byte[] pixelBuffer = new byte[bytes];
+
+                    System.Runtime.InteropServices.Marshal.Copy(scan0, pixelBuffer, 0, bytes);
+
+                    // Inverser les couleurs (R, G, B) sauf Alpha
+                    for (int i = 0; i < bytes; i += bytesPerPixel)
                     {
-                        for (int x = 0; x < width; x++)
-                        {
-                            Color pixel = original.GetPixel(x, y);
-                            Color inverted = Color.FromArgb(pixel.A, 255 - pixel.R, 255 - pixel.G, 255 - pixel.B);
-                            original.SetPixel(x, y, inverted);
-                        }
+                        pixelBuffer[i] = (byte)(255 - pixelBuffer[i]);       // Blue
+                        pixelBuffer[i + 1] = (byte)(255 - pixelBuffer[i + 1]); // Green
+                        pixelBuffer[i + 2] = (byte)(255 - pixelBuffer[i + 2]); // Red
                     }
+
+                    // Copier les données inversées
+                    System.Runtime.InteropServices.Marshal.Copy(pixelBuffer, 0, scan0, bytes);
+                    original.UnlockBits(bitmapData);
 
                     // Générer le nouveau nom de fichier
                     string directory = AppDomain.CurrentDomain.BaseDirectory;
                     string newFileName = Path.Combine(directory, Path.GetFileNameWithoutExtension(filename) + "_inverse" + Path.GetExtension(filename));
 
-                    // Sauvegarder l'image
+                    // Sauvegarde
                     original.Save(newFileName, original.RawFormat);
                 }
             }
