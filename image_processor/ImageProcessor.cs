@@ -1,138 +1,82 @@
 using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Diagnostics;
+using System.Collections.Generic;
 
-/// <summary>
-/// Provides methods for processing images, such as inverting their colors.
-/// </summary>
-public class ImageProcessor
+class ImageProcessor
 {
-    /// <summary>
-    /// Inverts the colors of the images specified by the file paths and saves them in the "image_processor" directory,
-    /// which is located in the parent directory of the source images directory.
-    /// </summary>
-    /// <param name="filenames">An array of file paths to the source images.</param>
     public static void Inverse(string[] filenames)
     {
-        Parallel.ForEach (filenames, filename =>
-        {
-            // Load the original image
-            Bitmap original = new Bitmap(filename);
-            Bitmap inverted = new Bitmap(original.Width, original.Height);
-
-            // Invert the colors of the image
-            for (int x = 0; x < original.Width; x++)
-            {
-                for (int y = 0; y < original.Height; y++)
-                {
-                    Color originalColor = original.GetPixel(x, y);
-                    Color invertedColor = Color.FromArgb(255 - originalColor.R, 255 - originalColor.G, 255 - originalColor.B);
-                    inverted.SetPixel(x, y, invertedColor);
-                }
-            }
-
-            // Extract the file name without the original path and add "_inverse" before the extension
-                string[] nameSplit = filename.Split(new char[] { '/', '.' });
-                string newFilename = $"{nameSplit[nameSplit.Length - 2]}_inverse.{nameSplit[nameSplit.Length - 1]}";
-
-                // Save the inverted image
-                inverted.Save(newFilename);
-        });
+        AsyncFunction(filenames);
     }
+    private static async Task AsyncFunction(string[] filenames)
+    {
+        await Task.WhenAll(Array.ConvertAll(filenames, async file => await ProcessImageThread(file)));
+    }
+    private static async Task ProcessImageThread(string file_name)
+    {
+        Bitmap bitmap = new Bitmap(file_name);
 
-    /// <summary>
-    /// Converts the images specified by the file paths to grayscale and saves them in the "image_processor" directory,
-    /// which is located in the parent directory of the source images directory.
-    /// </summary>
-    /// <param name="filenames">An array of file paths to the source images.</param>
+        BitmapData lockedimage = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadWrite, bitmap.PixelFormat);
+        int img_size = lockedimage.Stride * lockedimage.Height;
+        byte[] image_copy = new byte[img_size];
+
+        System.Runtime.InteropServices.Marshal.Copy(lockedimage.Scan0, image_copy, 0, img_size);
+
+        for (int i = 0; i < img_size; i++)
+            image_copy[i] = (byte)(255 - image_copy[i]);
+
+        System.Runtime.InteropServices.Marshal.Copy(image_copy, 0, lockedimage.Scan0, img_size);
+        bitmap.UnlockBits(lockedimage);
+
+        string[] slip = file_name.Split(new char[] { '/', '.' });
+        bitmap.Save(slip[slip.Length - 2] + "_inverse." + slip[slip.Length - 1]);
+
+    }
     public static void Grayscale(string[] filenames)
     {
-        Parallel.ForEach(filenames, filename =>
+        foreach (var file_name in filenames)
         {
-            // Load the original image
-            Bitmap original = new Bitmap(filename);
-            Bitmap grayscale = new Bitmap(original.Width, original.Height);
+            Bitmap bitmap = new Bitmap(file_name);
 
-            // Convert the image to grayscale
-            for (int x = 0; x < original.Width; x++)
+            for (int y = 0; y < bitmap.Height; y++)
             {
-                for (int y = 0; y < original.Height; y++)
+                for (int x = 0; x < bitmap.Width; x++)
                 {
-                    Color originalColor = original.GetPixel(x, y);
-                    int grayValue = (int)(0.2126 * originalColor.R + 0.7152 * originalColor.G + 0.0722 * originalColor.B);
-                    Color grayColor = Color.FromArgb(grayValue, grayValue, grayValue);
-                    grayscale.SetPixel(x, y, grayColor);
+                    Color pixelColor = bitmap.GetPixel(x, y);
+                    int grey = (pixelColor.R + pixelColor.G + pixelColor.B) / 3;
+                    bitmap.SetPixel(x, y, Color.FromArgb(grey, grey, grey));
                 }
             }
 
-            // Extract the file name without the original path and add "_grayscale" before the extension
-            string[] nameSplit = filename.Split(new char[] { '/', '.' });
-            string newFilename = $"{nameSplit[nameSplit.Length - 2]}_grayscale.{nameSplit[nameSplit.Length - 1]}";
-
-            // Save the grayscale image
-            grayscale.Save(newFilename);
-        });
+            string[] slip = file_name.Split(new char[] { '/', '.' });
+            bitmap.Save(slip[slip.Length - 2] + "_grayscale." + slip[slip.Length - 1]);
+        }
     }
-
-     /// <summary>
-    /// Reduces the images specified by the file paths to black and white based on a given threshold
-    /// and saves them in the "image_processor" directory, which is located in the parent directory of the source images directory.
-    /// </summary>
-    /// <param name="filenames">An array of file paths to the source images.</param>
-    /// <param name="threshold">The threshold value for black and white conversion.</param>
     public static void BlackWhite(string[] filenames, double threshold)
     {
-        Parallel.ForEach(filenames, filename =>
+        Parallel.ForEach(filenames, file_name =>
         {
-            // Load the original image
-            Bitmap original = new Bitmap(filename);
-            Bitmap blackWhite = new Bitmap(original.Width, original.Height);
+            Bitmap bitmap = new Bitmap(file_name);
 
-            // Convert the image to black and white based on the threshold
-            for (int x = 0; x < original.Width; x++)
+            for (int y = 0; y < bitmap.Height; y++)
             {
-                for (int y = 0; y < original.Height; y++)
+                for (int x = 0; x < bitmap.Width; x++)
                 {
-                    Color originalColor = original.GetPixel(x, y);
-                    int luminance = (int)(0.2126 * originalColor.R + 0.7152 * originalColor.G + 0.0722 * originalColor.B);
-                    Color blackWhiteColor = luminance >= threshold ? Color.White : Color.Black;
-                    blackWhite.SetPixel(x, y, blackWhiteColor);
+                    Color pixelColor = bitmap.GetPixel(x, y);
+                    double grey = (pixelColor.R + pixelColor.G + pixelColor.B) / 3;
+                    if (grey > threshold)
+                        bitmap.SetPixel(x, y, Color.FromArgb(255, 255, 255));
+                    else
+                        bitmap.SetPixel(x, y, Color.FromArgb(0, 0, 0));
                 }
             }
 
-            // Extract the file name without the original path and add "_bw" before the extension
-            string[] nameSplit = filename.Split(new char[] { '/', '.' });
-            string newFilename = $"{nameSplit[nameSplit.Length - 2]}_bw.{nameSplit[nameSplit.Length - 1]}";
-
-            // Save the black and white image
-            blackWhite.Save(newFilename);
-        });
-    }
-
-     /// <summary>
-    /// Creates a thumbnail image based on a given height (in pixels) and retains the aspect ratio of the original image.
-    /// </summary>
-    /// <param name="filenames">An array of file paths to the source images.</param>
-    /// <param name="height">The height of the thumbnail image in pixels.</param>
-    public static void Thumbnail(string[] filenames, int height)
-    {
-        Parallel.ForEach(filenames, filename =>
-        {
-            // Load the original image
-            Bitmap original = new Bitmap(filename);
-
-            // Calculate the new width to maintain the aspect ratio
-            int width = (int)((double)height / original.Height * original.Width);
-
-            // Create the thumbnail image
-            Bitmap thumbnail = new Bitmap(original, new Size(width, height));
-
-            // Extract the file name without the original path and add "_th" before the extension
-            string[] nameSplit = filename.Split(new char[] { '/', '.' });
-            string newFilename = $"{nameSplit[nameSplit.Length - 2]}_th.{nameSplit[nameSplit.Length - 1]}";
-
-            // Save the thumbnail image
-            thumbnail.Save(newFilename);
+            string[] slip = file_name.Split(new char[] { '/', '.' });
+            bitmap.Save(slip[slip.Length - 2] + "_bw." + slip[slip.Length - 1]);
         });
     }
 }
