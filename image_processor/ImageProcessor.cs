@@ -56,20 +56,4 @@ class ImageProcessor
             }
         });
     }
-
-    /// <summary>
-    /// Returns the correct ImageFormat based on the file extension.
-    /// </summary>
-    private static ImageFormat GetImageFormat(string imagePath)
-    {
-        string extension = Path.GetExtension(imagePath).ToLower();
-        return extension switch
-        {
-            ".png" => ImageFormat.Png,
-            ".bmp" => ImageFormat.Bmp,
-            ".gif" => ImageFormat.Gif,
-            ".tiff" => ImageFormat.Tiff,
-            _ => ImageFormat.Jpeg
-        };
-    }
 }
