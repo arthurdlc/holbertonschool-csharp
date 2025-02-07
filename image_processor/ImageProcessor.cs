@@ -2,46 +2,47 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 
 class ImageProcessor
 {
     /// <summary>
-    /// Inverts a list of image(s).
+    /// Inverts a list of image(s) in parallel.
     /// </summary>
     /// <param name="filenames">A list of images to invert.</param>
     public static void Inverse(string[] filenames)
     {
-        foreach (string imagePath in filenames)
+        Parallel.ForEach(filenames, imagePath =>
         {
             using (Bitmap image = new Bitmap(imagePath))
             {
                 int width = image.Width;
                 int height = image.Height;
 
-                BitmapData bmpData = image.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
+                BitmapData bmpData = image.LockBits(new Rectangle(0, 0, width, height),
+                    ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
 
                 int stride = bmpData.Stride;
-                byte[] pixelBuffer = new byte[stride * height];
+                int byteCount = stride * height;
+                byte[] pixelBuffer = new byte[byteCount];
 
-                System.Runtime.InteropServices.Marshal.Copy(bmpData.Scan0, pixelBuffer, 0, pixelBuffer.Length);
+                Marshal.Copy(bmpData.Scan0, pixelBuffer, 0, byteCount);
 
-                for (int i = 0; i < pixelBuffer.Length / 4; i++)
+                // Utilisation de Span pour améliorer l'accès en mémoire
+                Span<byte> spanBuffer = pixelBuffer.AsSpan();
+                for (int i = 0; i < byteCount; i += 4)
                 {
-                    int x = i * 4;
-                    pixelBuffer[x] ^= 0xFF;
-                    pixelBuffer[x + 1] ^= 0xFF;
-                    pixelBuffer[x + 2] ^= 0xFF;
+                    spanBuffer[i] = (byte)(255 - spanBuffer[i]);     // B
+                    spanBuffer[i + 1] = (byte)(255 - spanBuffer[i + 1]); // G
+                    spanBuffer[i + 2] = (byte)(255 - spanBuffer[i + 2]); // R
                 }
 
-                System.Runtime.InteropServices.Marshal.Copy(pixelBuffer, 0, bmpData.Scan0, pixelBuffer.Length);
-
+                Marshal.Copy(pixelBuffer, 0, bmpData.Scan0, byteCount);
                 image.UnlockBits(bmpData);
 
-                string[] nameSplit = imagePath.Split(new char[] { '/', '.' });
-                string newFilename = $"{nameSplit[nameSplit.Length - 2]}_inverse.{nameSplit[nameSplit.Length - 1]}";
-
+                string newFilename = $"{System.IO.Path.GetFileNameWithoutExtension(imagePath)}_inverse{System.IO.Path.GetExtension(imagePath)}";
                 image.Save(newFilename);
             }
-        }
+        });
     }
 }
