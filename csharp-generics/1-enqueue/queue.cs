@@ -2,9 +2,9 @@
 
 public class Queue<T>
 {
-    public Node<T> tail = null;
     public Node<T> head = null;
-    private int count = 0; // Privé pour éviter des modifications externes
+    public Node<T> tail = null;
+    private int count = 0;
 
     public Type CheckType()
     {
@@ -14,7 +14,7 @@ public class Queue<T>
     public void Enqueue(T value)
     {
         Node<T> node = new Node<T>(value);
-        if (tail == null)
+        if (head == null) // Si la queue est vide
         {
             head = node;
             tail = node;
@@ -24,7 +24,7 @@ public class Queue<T>
             tail.next = node;
             tail = node;
         }
-        count++;
+        count++; // Incrémentation du compteur
     }
 
     public int Count()
@@ -35,8 +35,8 @@ public class Queue<T>
 
 public class Node<T>
 {
-    public T value;
-    public Node<T> next;
+    public T value;  // Ne pas initialiser à null pour compatibilité avec les types valeur
+    public Node<T> next = null;
 
     public Node(T value)
     {
