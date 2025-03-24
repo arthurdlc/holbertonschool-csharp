@@ -1,9 +1,9 @@
-﻿using System;
+﻿﻿using System;
 
-public class Queue<T>
+class Queue<T>
 {
-    public string CheckType()
+    public Type CheckType() // faire en sorte que le renvoie de la fonction soit le type T
     {
-        return typeof(T);
+        return typeof(T); // on se sert de la methode tyopeof
     }
 }
