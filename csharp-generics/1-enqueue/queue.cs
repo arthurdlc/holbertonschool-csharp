@@ -1,21 +1,23 @@
 ﻿﻿using System;
 
-class Queue<T>
+public class Queue<T>
 {
     public Node<T> tail = null;
     public Node<T> head = null;
-    public int count = 0;
-    public Type CheckType() // faire en sorte que le renvoie de la fonction soit le type T
+    private int count = 0; // Privé pour éviter des modifications externes
+
+    public Type CheckType()
     {
-        return typeof(T); // on se sert de la methode tyopeof
+        return typeof(T);
     }
-    public void Enqueue(value)
+
+    public void Enqueue(T value)
     {
         Node<T> node = new Node<T>(value);
         if (tail == null)
         {
-            tail = node;
             head = node;
+            tail = node;
         }
         else
         {
@@ -24,16 +26,21 @@ class Queue<T>
         }
         count++;
     }
-    public int count() { return count; }   
+
+    public int Count()
+    {
+        return count;
+    }
 }
 
-class Node<T>
+public class Node<T>
 {
-    public T value = null;
-    public Node<T> next = null;
+    public T value;
+    public Node<T> next;
 
     public Node(T value)
     {
         this.value = value;
+        this.next = null;
     }
 }
