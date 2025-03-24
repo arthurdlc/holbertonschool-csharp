@@ -1,9 +1,10 @@
-﻿﻿using System;
-
-class Queue<T>
+﻿﻿public abstract class Base
 {
-    public Type CheckType() // faire en sorte que le renvoie de la fonction soit le type T
+    public string Name { get; set; }
+
+    public override string ToString()
     {
-        return typeof(T); // on se sert de la methode tyopeof
+        // Utilisation de typeof (type statique)
+        return $"{Name} is a {typeof(Base).Name}";  // Renverra toujours "Base"
     }
 }
