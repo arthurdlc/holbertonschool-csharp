@@ -1,10 +1,9 @@
-﻿using system;
+﻿using System;
 
 public class Queue<T>
 {
-    public void CheckType(T item)
+    public string CheckType()
     {
-        Console.WriteLine("{0} is a {1}", item, typeof(T).Name);
-        //  dans ce cod eon a creer une classe generique qui n'a pas de type
+        return typeof(T).Name;
     }
 }
