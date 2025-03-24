@@ -11,8 +11,20 @@ class Queue<T>
     }
     public void Enqueue(value)
     {
-        
+        Node<T> node = new Node<T>(value);
+        if (tail == null)
+        {
+            tail = node;
+            head = node;
+        }
+        else
+        {
+            tail.next = node;
+            tail = node;
+        }
+        count++;
     }
+    public int count() { return count; }   
 }
 
 class Node<T>
