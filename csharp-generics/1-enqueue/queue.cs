@@ -22,7 +22,9 @@ public class Queue<T>
     {
         return typeof(T);
     }
-
+    /// <summary>
+    /// cette 
+    /// </summary>
     public void Enqueue(T value){
         Node<T> node = new Node<T>(value);
         if (head == null){
@@ -35,7 +37,9 @@ public class Queue<T>
         }
         count++; // Incrémentation du compteur
     }
-
+    /// <summary>
+    /// cette fonction sert a renvoyer lnombre d'elements dans la Queue
+    /// </summary>
     public int Count(){
         return count;
     }
