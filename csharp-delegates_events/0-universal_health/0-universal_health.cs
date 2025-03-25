@@ -12,7 +12,7 @@ public class Player
     private float hp;
 
     // fonction de constructor, on attribut les proprietes du joueur
-    public Player(string name, float maxHp) {
+    public void Player(string name, float maxHp) {
         this.name = name;
         this.maxHp = maxHp;
         if (maxHp <= 0f) {
