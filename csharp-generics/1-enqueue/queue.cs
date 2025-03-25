@@ -13,9 +13,11 @@ public class Queue<T>
     /// <returns></returns>
     public Node<T> head = null;
     public Node<T> tail = null;
-
     private int count = 0;
 
+    /// <summary>
+    /// cette fonction sert a renvoyer le type de Queue
+    /// </summary> 
     public Type CheckType()
     {
         return typeof(T);
