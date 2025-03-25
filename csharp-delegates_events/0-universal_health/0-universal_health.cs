@@ -22,7 +22,7 @@
     }
 
     // cette fonction renvoie un string qui dis ne nom du joueur, et sa vie actuelle par rapport a ses hp max possible
-    public void PrintHealth(this name, this hp, this maxHp) {
-        Console.WriteLine($"{name} has {hp} / {maxHp} health");
+    public void PrintHealth(string name, float hp, float maxHp) {
+        Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
     }
 }
