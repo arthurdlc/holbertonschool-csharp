@@ -27,10 +27,3 @@ public class Player
         Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
     }
 }
-/*************  ✨ Codeium Command ⭐  *************/
-/******  484c89d9-c293-4061-85bd-b16df3d542ae  *******//// <summary>
-
-/// Prints the current health status of the player to the console.
-
-/// </summary>
-
