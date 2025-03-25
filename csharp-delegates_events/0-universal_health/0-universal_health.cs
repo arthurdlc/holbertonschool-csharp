@@ -7,14 +7,14 @@ public class Player
     /// hp: les hp actuel du joueur
     /// hpMax: les hp max du joueur
     /// </summary>
-    private string name ="Player"; 
-    private float maxHp = 100f;
+    private string name; 
+    private float maxHp;
     private float hp;
 
     // fonction de constructor, on attribut les proprietes du joueur
     public void Player(string name, float maxHp) {
-        this.name = name;
-        this.maxHp = maxHp;
+        this.name = "Player";
+        this.maxHp = 100f;
         if (maxHp <= 0f) {
             this.maxHp = 100f;
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default."); 
