@@ -1,0 +1,16 @@
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\bin\Debug\net7\1-enqueue.exe
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\bin\Debug\net7\1-enqueue.xml
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\bin\Debug\net7\1-enqueue.deps.json
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\bin\Debug\net7\1-enqueue.runtimeconfig.json
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\bin\Debug\net7\1-enqueue.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\bin\Debug\net7\1-enqueue.pdb
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\1-enqueue.csproj.AssemblyReference.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\1-enqueue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\1-enqueue.AssemblyInfoInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\1-enqueue.AssemblyInfo.cs
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\1-enqueue.csproj.CoreCompileInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\1-enqueue.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\refint\1-enqueue.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\1-enqueue.pdb
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\1-enqueue.genruntimeconfig.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\1-enqueue\obj\Debug\net7\ref\1-enqueue.dll
