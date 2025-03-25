@@ -1,4 +1,5 @@
-﻿public class Player
+﻿using System;
+public class Player
 {
     /// <summary>
     /// propriete du joueur
