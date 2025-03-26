@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tfA1JUNr0w2Ut60VXnnIHMVQcx0I7wvqU2bqZzRIQnBPXqvaXBy0+RZD9XpLRq9fEQFybhWT4e70ev96jx5Q+w==",
+  "dgSpecHash": "s9eNI7LB51yP4c+BKVAoOsXVynRGRrQr/m8cLgdU1xg0LuEGKV1weaD9grj//roRuhK2G/kxN8JPMbDyBGFZBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-generics\\1-enqueue\\1-enqueue.csproj",
+  "projectFilePath": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-generics\\2-dequeue\\2-dequeue.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -62,6 +62,22 @@ public class Queue<T>
         count++;
     }
 
+    ///<summary>
+    /// Removes the first node in the queue and returns its value.
+    ///</summary>
+    public void Dequeue(T value)
+    {
+        if (head == null)
+        {
+            Console.WriteLine("Queue is empty");
+        }
+        else
+        {
+            head = head.next;
+            count--;
+        }
+    }
+
     /// <summary>
     /// Returns the number of nodes in the Queue.
     /// </summary>

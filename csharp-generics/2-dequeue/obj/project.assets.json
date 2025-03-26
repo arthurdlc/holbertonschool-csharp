@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-generics\\1-enqueue\\1-enqueue.csproj",
-      "projectName": "1-enqueue",
-      "projectPath": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-generics\\1-enqueue\\1-enqueue.csproj",
+      "projectUniqueName": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-generics\\2-dequeue\\2-dequeue.csproj",
+      "projectName": "2-dequeue",
+      "projectPath": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-generics\\2-dequeue\\2-dequeue.csproj",
       "packagesPath": "C:\\Users\\thali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-generics\\1-enqueue\\obj\\",
+      "outputPath": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-generics\\2-dequeue\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

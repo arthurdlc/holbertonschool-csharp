@@ -63,6 +63,34 @@ public class Queue<T>
     }
 
     /// <summary>
+    /// Delete the first node from the Queue.
+    /// </summary>
+    public T Dequeue()
+    {
+        T returnValue = default(T);
+        if (head == null)
+        {
+            Console.WriteLine("Queue is empty");
+        }
+        else if (count >= 1)
+        {
+            returnValue = head.value;
+            if (count == 1)
+            {
+                head = null;
+                tail = null;
+            }
+            else
+            {
+                head = head.next;
+            }
+        }
+
+        count--;
+        return returnValue;
+    }
+
+    /// <summary>
     /// Returns the number of nodes in the Queue.
     /// </summary>
     public int Count()
