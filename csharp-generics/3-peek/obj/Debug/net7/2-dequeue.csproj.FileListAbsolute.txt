@@ -1,0 +1,5 @@
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\2-dequeue\obj\Debug\net7\2-dequeue.csproj.AssemblyReference.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\2-dequeue\obj\Debug\net7\2-dequeue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\2-dequeue\obj\Debug\net7\2-dequeue.AssemblyInfoInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\2-dequeue\obj\Debug\net7\2-dequeue.AssemblyInfo.cs
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\2-dequeue\obj\Debug\net7\2-dequeue.csproj.CoreCompileInputs.cache
