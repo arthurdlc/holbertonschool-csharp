@@ -121,10 +121,14 @@ public class Queue<T>
         }
         else
         {
-            returnValue = head.value;
+            Node currentNode = head;
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine("{0}", currentNode.value);
+                currentNode = currentNode.next;
+            }
         }
 
-        return returnValue;
     }
     /// <summary>
     /// Returns the number of nodes in the Queue.
