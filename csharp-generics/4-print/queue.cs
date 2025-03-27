@@ -123,6 +123,8 @@ public class Queue<T>
         {
             returnValue = head.value;
         }
+
+        return returnValue;
     }
     /// <summary>
     /// Returns the number of nodes in the Queue.
