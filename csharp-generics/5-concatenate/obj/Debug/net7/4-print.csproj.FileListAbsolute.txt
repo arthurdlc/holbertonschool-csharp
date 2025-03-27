@@ -1,0 +1,16 @@
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\4-print.csproj.AssemblyReference.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\4-print.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\4-print.AssemblyInfoInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\4-print.AssemblyInfo.cs
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\4-print.csproj.CoreCompileInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\bin\Debug\net7\4-print.exe
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\bin\Debug\net7\4-print.xml
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\bin\Debug\net7\4-print.deps.json
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\bin\Debug\net7\4-print.runtimeconfig.json
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\bin\Debug\net7\4-print.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\bin\Debug\net7\4-print.pdb
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\4-print.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\refint\4-print.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\4-print.pdb
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\4-print.genruntimeconfig.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\4-print\obj\Debug\net7\ref\4-print.dll
