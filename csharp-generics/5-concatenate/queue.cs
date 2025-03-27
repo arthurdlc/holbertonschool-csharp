@@ -126,24 +126,40 @@ public class Queue<T>
                 currentNode = currentNode.next;
             }
         }
-    }    
+    }
 
-    public void Concatenate(Queue<T> queue)
+    /// <summary>
+    /// Concatenates all values in the queue only if the queue is of type String or Char.
+    /// </summary>
+    public string Concatenate()
     {
-        if(queue.head != null)
+        if (head == null)
         {
             Console.WriteLine("Queue is empty");
+            return null;
         }
-        else
+
+        Type typeQueue = CheckType();
+        if (typeQueue != typeof(String) && typeQueue != typeof(char))
         {
-            Node currentNode = head;
-            for (int i = 0; i < count; i++)
-            {
-                queue.Enqueue(currentNode.value);
-                currentNode = currentNode.next;
-            }
+            Console.WriteLine("Concatenate is for a queue of Strings or Chars only.");
+            return null;
         }
+        
+        string returnValue = "";
+        Node currentNode = head;
+        for (int i = 0; i < count; i++)
+        {
+            
+            returnValue = returnValue + currentNode.value;
+            if (typeQueue == typeof(String))
+                returnValue = returnValue + " ";
+            currentNode = currentNode.next;
+        }
+        return returnValue.Trim();
+        
     }
+
     /// <summary>
     /// Returns the number of nodes in the Queue.
     /// </summary>
@@ -152,4 +168,5 @@ public class Queue<T>
         return count;
     }
 }
+
 

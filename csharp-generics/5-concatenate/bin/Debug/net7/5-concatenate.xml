@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>5-concatenate</name>
+    </assembly>
+    <members>
+        <member name="T:Queue`1">
+            <summary>
+            This class should not inherit from other classes or interfaces.
+            </summary>
+        </member>
+        <member name="F:Queue`1.head">
+            First Node of the Queue.
+        </member>
+        <member name="F:Queue`1.tail">
+            Last Node of the Queue.
+        </member>
+        <member name="F:Queue`1.count">
+            Number of Nodes in the Queue.
+        </member>
+        <member name="T:Queue`1.Node">
+            <summary>
+            Subclass to manage Queue elements.
+            </summary>
+        </member>
+        <member name="F:Queue`1.Node.value">
+            <summary>Gets or sets the value of the Node.</summary>
+        </member>
+        <member name="F:Queue`1.Node.next">
+            <summary>Gets or sets the next Node in the Queue.</summary>
+        </member>
+        <member name="M:Queue`1.Node.#ctor(`0)">
+            <summary>
+            initialize a Node.
+            </summary>
+        </member>
+        <member name="M:Queue`1.CheckType">
+            <summary>
+            Returns the Queue’s type.
+            </summary>
+        </member>
+        <member name="M:Queue`1.Enqueue(`0)">
+            <summary>
+            Creates a new Node and adds it to the end of the queue.
+            </summary>
+        </member>
+        <member name="M:Queue`1.Dequeue">
+            <summary>
+            Delete the first node from the Queue.
+            </summary>
+        </member>
+        <member name="M:Queue`1.Peek">
+            <summary>
+            Return the first node from the Queue.
+            </summary>
+        </member>
+        <member name="M:Queue`1.Print">
+            <summary>
+            Prints the queue, starting from the head.
+            </summary>
+        </member>
+        <member name="M:Queue`1.Count">
+            <summary>
+            Returns the number of nodes in the Queue.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,16 @@
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\bin\Debug\net7\5-concatenate.exe
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\bin\Debug\net7\5-concatenate.xml
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\bin\Debug\net7\5-concatenate.deps.json
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\bin\Debug\net7\5-concatenate.runtimeconfig.json
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\bin\Debug\net7\5-concatenate.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\bin\Debug\net7\5-concatenate.pdb
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\5-concatenate.csproj.AssemblyReference.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\5-concatenate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\5-concatenate.AssemblyInfoInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\5-concatenate.AssemblyInfo.cs
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\5-concatenate.csproj.CoreCompileInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\5-concatenate.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\refint\5-concatenate.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\5-concatenate.pdb
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\5-concatenate.genruntimeconfig.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-generics\5-concatenate\obj\Debug\net7\ref\5-concatenate.dll
