@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>3-decorations</name>
+    </assembly>
+    <members>
+        <member name="T:IInteractive">
+            <summary>
+            Interface to interact.
+            </summary>
+        </member>
+        <member name="M:IInteractive.Interact">
+            <summary>Interact method to be implemented.</summary>
+        </member>
+        <member name="T:IBreakable">
+            <summary>
+            Interface to break.
+            </summary>
+        </member>
+        <member name="P:IBreakable.durability">
+            <summary>Durability property to be implemented.</summary>
+        </member>
+        <member name="M:IBreakable.Break">
+            <summary>Break method to be implemented.</summary>
+        </member>
+        <member name="T:ICollectable">
+            <summary>
+            Interface to Collect.
+            </summary>
+        </member>
+        <member name="P:ICollectable.isCollected">
+            <summary>Boolean property isCollected to be implemented.</summary>
+        </member>
+        <member name="M:ICollectable.Collect">
+            <summary>Collect method to be implemented.</summary>
+        </member>
+        <member name="T:Base">
+            <summary>
+            This class is abstract and can't be instanciated.
+            </summary>
+        </member>
+        <member name="P:Base.name">
+            <summary>String name property.</summary>
+        </member>
+        <member name="M:Base.ToString">
+            <summary>
+            Overrides Base method ToString to print information about name.
+            </summary>
+        </member>
+        <member name="T:Door">
+            <summary>
+            Door class that inherits Base and implements IInteractive.
+            </summary>
+        </member>
+        <member name="M:Door.#ctor(System.String)">
+            <summary>Constructor that sets the value of name</summary>
+        </member>
+        <member name="M:Door.Interact">
+            <summary>Implementation of Interact method of IInteractive</summary>
+        </member>
+        <member name="P:Decoration.isQuestItem">
+            <summary>isQuestItem property</summary>
+        </member>
+        <member name="P:Decoration.durability">
+            <summary>
+            Implementation of durability property of IBreakable.
+            </summary>
+        </member>
+        <member name="M:Decoration.#ctor(System.String,System.Int32,System.Boolean)">
+            <summary>Constructor that sets the properties</summary>
+        </member>
+        <member name="M:Decoration.Interact">
+            <summary>Implementation of Interact method of IInteractive</summary>
+        </member>
+        <member name="M:Decoration.Break">
+            <summary>Implementation of Break method of IBreakable</summary>
+        </member>
+    </members>
+</doc>
