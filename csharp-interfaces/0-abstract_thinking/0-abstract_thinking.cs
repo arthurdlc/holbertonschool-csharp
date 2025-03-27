@@ -1,13 +1,16 @@
 ﻿using System;
 
-public abstract class Base
+/// <summary>
+/// This class is abstract and can't be instanciated.
+/// </summary>
+abstract class Base
 {
-    // Public property name of type string
-    public string Name;
+    /// <summary>String name property.</summary>
+    public string name = String.Empty;
 
-    // Override the ToString() method to return "<name> is a <type>"
+    /// <summary>Overrides Base method ToString to print information about name.</summary>
     public override string ToString()
     {
-        return $"{Name} is a {this.GetType().Name}";
+        return name + " is a " + this.GetType();
     }
 }
