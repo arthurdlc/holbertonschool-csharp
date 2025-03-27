@@ -109,12 +109,10 @@ public class Queue<T>
     }
 
     /// <summary>
-    /// Prints the Queue.
+    /// Prints the queue, starting from the head.
     /// </summary>
-    /// <returns></returns> 
-    public T Print()
+    public void Print()
     {
-        T returnValue = default(T);
         if (head == null)
         {
             Console.WriteLine("Queue is empty");
@@ -128,8 +126,8 @@ public class Queue<T>
                 currentNode = currentNode.next;
             }
         }
+    }    
 
-    }
     /// <summary>
     /// Returns the number of nodes in the Queue.
     /// </summary>
@@ -138,3 +136,4 @@ public class Queue<T>
         return count;
     }
 }
+

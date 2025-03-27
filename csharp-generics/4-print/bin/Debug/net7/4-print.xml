@@ -56,9 +56,8 @@
         </member>
         <member name="M:Queue`1.Print">
             <summary>
-            Prints the Queue.
+            Prints the queue, starting from the head.
             </summary>
-            <returns></returns> 
         </member>
         <member name="M:Queue`1.Count">
             <summary>
