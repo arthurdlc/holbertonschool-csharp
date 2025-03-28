@@ -69,6 +69,9 @@ public class Door : Base, IInteractive
 
 }
 
+/// <summary>
+/// Decoration class that inherits Base and implements IInteractive and IBreakable.
+/// </summary>
 public class Decoration : Base, IInteractive, IBreakable
 {
     /// <summary>isQuestItem property</summary>
