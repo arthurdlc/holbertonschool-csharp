@@ -1,6 +1,4 @@
-C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net7.0\InventoryLibrary.exe
 C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net7.0\InventoryLibrary.deps.json
-C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net7.0\InventoryLibrary.runtimeconfig.json
 C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net7.0\InventoryLibrary.dll
 C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net7.0\InventoryLibrary.pdb
 C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7.0\InventoryLibrary.csproj.AssemblyReference.cache
@@ -11,5 +9,4 @@ C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_inter
 C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7.0\InventoryLibrary.dll
 C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7.0\refint\InventoryLibrary.dll
 C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7.0\InventoryLibrary.pdb
-C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7.0\InventoryLibrary.genruntimeconfig.cache
 C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7.0\ref\InventoryLibrary.dll
