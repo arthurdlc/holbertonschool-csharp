@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryLibrary", "InventoryLibrary\InventoryLibrary.csproj", "{6B62AF0E-CAFC-4C59-B587-53C229B08B24}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryApp", "InventoryApp\InventoryApp.csproj", "{52A696AC-C05D-472E-A160-B2F210E71FAB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryTests", "InventoryTests\InventoryTests.csproj", "{E6B958E3-3A08-4D5F-93D1-FC16161747CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryLibrary", "InventoryLibrary\InventoryLibrary.csproj", "{E205FAB7-B08E-4E4A-9CEA-E43EE0D26259}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,17 +14,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6B62AF0E-CAFC-4C59-B587-53C229B08B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B62AF0E-CAFC-4C59-B587-53C229B08B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B62AF0E-CAFC-4C59-B587-53C229B08B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B62AF0E-CAFC-4C59-B587-53C229B08B24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52A696AC-C05D-472E-A160-B2F210E71FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52A696AC-C05D-472E-A160-B2F210E71FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52A696AC-C05D-472E-A160-B2F210E71FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52A696AC-C05D-472E-A160-B2F210E71FAB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6B958E3-3A08-4D5F-93D1-FC16161747CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6B958E3-3A08-4D5F-93D1-FC16161747CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6B958E3-3A08-4D5F-93D1-FC16161747CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6B958E3-3A08-4D5F-93D1-FC16161747CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E205FAB7-B08E-4E4A-9CEA-E43EE0D26259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E205FAB7-B08E-4E4A-9CEA-E43EE0D26259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E205FAB7-B08E-4E4A-9CEA-E43EE0D26259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E205FAB7-B08E-4E4A-9CEA-E43EE0D26259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
