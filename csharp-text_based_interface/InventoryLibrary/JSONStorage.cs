@@ -2,70 +2,90 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using InventoryLibrary;
 
 namespace InventoryLibrary
 {
     public class JSONStorage
     {
-        // Dictionnaire pour stocker les objets avec une clé "<ClassName>.<id>"
-        private Dictionary<string, object> objects = new Dictionary<string, object>();
+        private const string StorageDir = "storage";
+        private const string FileName = "inventory_manager.json";
+        private string FilePath;
 
-        // Chemin du fichier JSON où les objets sont sauvegardés
-        private string filePath = "../storage/inventory_manager.json";
+        public Dictionary<string, string> objects { get; set; }
 
-        /// <summary>
-        /// Retourne tous les objets stockés.
-        /// </summary>
-        public Dictionary<string, object> All()
+        public JSONStorage()
+        {
+            FilePath = Path.Combine(StorageDir, FileName);
+            objects = new Dictionary<string, string>();
+        }
+
+        public Dictionary<string, string> All()
         {
             return objects;
         }
 
-        /// <summary>
-        /// Ajoute un nouvel objet au dictionnaire avec une clé unique.
-        /// </summary>
-        public void New(object obj)
+        public void New(BaseClass obj)
         {
-            // Récupération du type de l'objet
-            string className = obj.GetType().Name;
-
-            // Vérification si l'objet hérite de BaseClass (pour s'assurer qu'il a un id)
-            if (obj is BaseClass baseObj)
+            string id = obj.GetType().GetProperty("id")?.GetValue(obj)?.ToString();
+            if (id != null)
             {
-                string key = $"{className}.{baseObj.id}";
-                objects[key] = obj;  // Ajout au dictionnaire
+                string key = $"{obj.GetType().Name}.{id}";
+                if (objects.ContainsKey(key))
+                    throw new ArgumentException($"Object with key {key} already exists.");
+                string jsonString = JsonSerializer.Serialize(obj, obj.GetType()); ;
+                objects[key] = jsonString;
             }
             else
             {
-                throw new ArgumentException("L'objet doit hériter de BaseClass.");
+                throw new ArgumentException("Object does not have a valid ID.");
             }
         }
 
-        /// <summary>
-        /// Sauvegarde des objets dans un fichier JSON.
-        /// </summary>
         public void Save()
         {
-            // Sérialisation en JSON
-            string jsonString = JsonSerializer.Serialize(objects, new JsonSerializerOptions { WriteIndented = true });
+            if (!Directory.Exists(StorageDir))
+                Directory.CreateDirectory(StorageDir);
 
-            // Écriture dans le fichier
-            File.WriteAllText(filePath, jsonString);
+            string json = JsonSerializer.Serialize(objects, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(FilePath, json);
         }
 
-        /// <summary>
-        /// Charge les objets depuis un fichier JSON.
-        /// </summary>
         public void Load()
         {
-            if (File.Exists(filePath))
+            if (!File.Exists(FilePath))
+                return;
+            string json = File.ReadAllText(FilePath);
+            if (string.IsNullOrWhiteSpace(json))
             {
-                // Lecture du fichier JSON
-                string jsonString = File.ReadAllText(filePath);
-
-                // Désérialisation en dictionnaire d’objets
-                objects = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonString) ?? new Dictionary<string, object>();
+                objects = new Dictionary<string, string>();
+                return;
             }
+            objects = JsonSerializer.Deserialize<Dictionary<string, string>>(json) ?? new Dictionary<string, string>();
         }
+
+        public T GetObject<T>(string key)
+        {
+            if (objects.ContainsKey(key))
+            {
+                try
+                {
+                    Console.WriteLine($"Attempting to deserialize key: {key}");
+                    return JsonSerializer.Deserialize<T>(objects[key]);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Deserialization error for key {key}: {ex.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Key {key} does not exist in objects.");
+            }
+
+            return default;
+        }
+
     }
+
 }
