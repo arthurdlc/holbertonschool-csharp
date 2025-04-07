@@ -1,0 +1,12 @@
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net7\InventoryLibrary.deps.json
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net7\InventoryLibrary.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net7\InventoryLibrary.pdb
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\InventoryLibrary.csproj.AssemblyReference.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\InventoryLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\InventoryLibrary.AssemblyInfoInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\InventoryLibrary.AssemblyInfo.cs
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\InventoryLibrary.csproj.CoreCompileInputs.cache
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\InventoryLibrary.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\refint\InventoryLibrary.dll
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\InventoryLibrary.pdb
+C:\Users\thali\OneDrive\Documents\holbertonschool-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net7\ref\InventoryLibrary.dll

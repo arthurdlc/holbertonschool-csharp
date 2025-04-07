@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BqpRaJRl//JYW2+ym6/YMpDVX7BkNnZeDEPIXM9RcJZmoVoqIXgwK8v+l5tRIXlBUYILsSzLk8rbfE2InurC2Q==",
+  "dgSpecHash": "m42Rq9hdrNf9nA/jhlQkA7hyQIAlK43aZ4t+eBIcPvLt/51i+s02CHE/vd669looKpV2e9gDGysdOAtoLzB5GQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-text_based_interface\\InventoryLibrary\\InventoryLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\thali\\.nuget\\packages\\system.text.json\\5.0.2\\system.text.json.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
