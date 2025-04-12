@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "WX1Qt/TkgHjuZbUGyRkfriABHvKJMiIWGbP1H3DZV1prhIYQ5G9Fk/8tSQrJ86lt57nX8stCC1104qXEX1CKuA==",
-  "success": true,
+  "dgSpecHash": "FHUxOaMf4hq2XMdLmLjykv1O7hShTZKW1Mky+5a1Uh7bpMWrs4th/U13NMbLLqJp+WHNGLs5Mjx3BhkTBw794g==",
+  "success": false,
   "projectFilePath": "C:\\Users\\thali\\OneDrive\\Documents\\holbertonschool-csharp\\csharp-text_based_interface\\InventoryManager\\InventoryManager.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet InventoryLibrary n'est pas compatible avec net6.0 (.NETCoreApp,Version=v6.0). Le projet InventoryLibrary prend en charge : net7.0 (.NETCoreApp,Version=v7.0)",
+      "libraryId": "InventoryLibrary",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
